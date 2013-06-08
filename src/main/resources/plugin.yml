@@ -13,37 +13,37 @@ softdepend: [Spout, TagAPI]
 commands:
     rename:
         aliases: newname
-        description: Changes the name of the player or target.
+        description: 改变当前玩家或目标的名称.
         permission: dispname.change
         usage: |
-            Surround names with spaces in quotes (i.e. "Super Bob").
-            /rename <target> <new name>
-            /rename <new name>
-            Aliases: newname
+            在名称中使用空格需要加上引号 (如 "Super Bob").
+            /rename <目标> <新名字>
+            /rename <新名字>
+            同义词: newname
     reset:
         aliases: resetname
-        description: Resets the players name or target player.
+        description: 重置玩家的名称或目标玩家.
         permission: dispname.change
         usage: |
             /resetname [target]
-            Aliases: resetname
+            同义词: resetname
     checkname:
         aliases: [namecheck, realname, whois]
-        description: Shows the alternate name of the player (Real name or Display name).
+        description: 显示玩家的名字 (真名或显示名).
         permission: dispname.check
         usage: |
-            /checkname <name>
-            Aliases: checkname, namecheck
+            /checkname <名字>
+            同义词: checkname, namecheck
     displaylist:
         aliases: [listnames, displist, dnclist]
-        description: Shows a list of all the users and their display names.
+        description: 显示所有用户及其显示名称的列表.
         permission: dispname.list
         usage: |
             /displaylist [page number]
-            Aliases: listnames, displist, dnclist
+            同义词: listnames, displist, dnclist
 permissions:
     dispname.*:
-        description: Allows access to all DispNameChanger commands and reserved color codes.
+        description: 允许访问的所有DispNameChanger命令和保留的颜色代码.
         children:
             dispname.announce: true
             dispname.change: true
@@ -52,24 +52,24 @@ permissions:
             dispname.check: true
             dispname.color.*: true
             dispname.list: true
-            
+
     dispname.color.*:
-        description: Allows access to all Color Codes and Styles.
+        description: 允许访问所有的颜色代码和样式.
         children:
             dispname.color.style.*: true
             dispname.color.all: true
-            
+
     dispname.color.style.*:
-        description: Allows access to all the Special Style Color Codes for use in display names.
+        description: 允许访问显示名称中使用的所有特殊样式颜色代码.
         children:
             dispname.color.style.bold: true
             dispname.color.style.italic: true
             dispname.color.style.magic: true
             dispname.color.style.strike: true
             dispname.color.style.underline: true
-            
+
     dispname.color.all:
-        description: Allows access to all the Color Codes for use in display names.
+        description: 允许访问显示名称中使用的所有颜色代码.
         children:
             dispname.color.black: true
             dispname.color.darkblue: true
@@ -88,83 +88,83 @@ permissions:
             dispname.color.yellow: true
             dispname.color.white: true
     dispname.announce:
-        description: Allows a user to recieve admin only name change broadcasts.
+        description: 允许用户接收名称变更广播.
         default: op
     dispname.change:
-        description: Allows a user to change their display name.
+        description: 允许用户更改自己的显示名称.
         default: op
     dispname.changeother:
-        description: Allows a user to change someone else's display name.
+        description: 允许用户改变别人的显示名称.
         default: op
     dispname.changespace:
-        description: Allows a user to use a space in the display name.
+        description: 允许用户在显示名称中使用空格.
         default: op
     dispname.check:
-        description: Allows a user to check who a renamed person is.
+        description: 允许用户检查改名者是谁.
         default: true
     dispname.color.style.bold:
-        description: Allows a user to use the bold color code.
+        description: 允许用户使用 粗体 颜色代码.
         default: op
     dispname.color.style.italic:
-        description: Allows a user to use the italic color code.
+        description: 允许用户使用 斜体 颜色代码.
         default: op
     dispname.color.style.magic:
-        description: Allows a user to use the magic color code.
+        description: 允许用户使用 随机字符 颜色代码.
         default: op
     dispname.color.style.strike:
-        description: Allows a user to use the strikethrough color code.
+        description: 允许用户使用 删除线 颜色代码.
         default: op
     dispname.color.style.underline:
-        description: Allows a user to use the underline color code.
+        description: 允许用户使用 下划线 颜色代码.
         default: op
     dispname.color.black:
-        description: Allows use of the Black Color Code.
+        description: 允许用户使用 黑色 颜色代码.
         default: op
     dispname.color.darkblue:
-        description: Allows use of the Dark Blue Color Code. Alt Name - Navy
+        description: 允许用户使用 深蓝 颜色代码. 
         default: op
     dispname.color.darkgreen:
-        description: Allows use of the Dark Green Color Code. Alt Name - Green
+        description: 允许用户使用 深绿 颜色代码. 
         default: op
     dispname.color.darkaqua:
-        description: Allows use of the Dark Aqua Color Code. Alt Name - Teal
+        description: 允许用户使用 深青 颜色代码. 
         default: op
     dispname.color.darkred:
-        description: Allows use of the Dark Red Color Code. Alt Name - Maroon
+        description: 允许用户使用 深红 颜色代码. 
         default: op
     dispname.color.purple:
-        description: Allows use of the Purple Color Code.
+        description: 允许用户使用 紫色 颜色代码.
         default: op
     dispname.color.orange:
-        description: Allows use of the Orange Color Code. Alt Name - Gold
+        description: 允许用户使用 橙色 颜色代码. 或者说金色
         default: op
     dispname.color.grey:
-        description: Allows use of the Grey Color Code. Alt Name - Silver
+        description: 允许用户使用 灰色 颜色代码. 或者说银色
         default: op
     dispname.color.darkgrey:
-        description: Allows use of the Dark Grey Color Code. Alt Name - Grey
+        description: 允许用户使用 深灰 颜色代码. 
         default: op
     dispname.color.indigo:
-        description: Allows use of the Indigo Color Code. Alt Name - Blue
+        description: 允许用户使用 靛青 颜色代码. 或者说蓝色
         default: op
     dispname.color.brightgreen:
-        description: Allows use of the Bright Green Color Code. Alt Name - Lime
+        description: 允许用户使用 浅绿 颜色代码. 
         default: op
     dispname.color.aqua:
-        description: Allows use of the Aqua Color Code.
+        description: 允许用户使用 青色 颜色代码.
         default: op
     dispname.color.red:
-        description: Allows use of the Red Color Code.
+        description: 允许用户使用 红色 颜色代码.
         default: op
     dispname.color.pink:
-        description: Allows use of the Pink Color Code.
+        description: 允许用户使用 粉色 颜色代码.
         default: op
     dispname.color.yellow:
-        description: Allows use of the Yellow Color Code.
+        description: 允许用户使用 黄色 颜色代码.
         default: op
     dispname.color.white:
-        description: Allows use of the White Color Code.
+        description: 允许用户使用 白色 颜色代码.
         default: op
     dispname.list:
-        descriptions: Allows a user to list all the users with their display names.
+        descriptions: 允许用户列出所有名字.
         default: true
