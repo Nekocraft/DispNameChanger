@@ -1,6 +1,6 @@
 ##  Plugin Information  ##
 name: DispNameChanger
-version: @version@
+version: ${project.version}
 description: Lets you change the display name of yourself or others.
 ##  Original Author     ##
 author: captainawesome7
