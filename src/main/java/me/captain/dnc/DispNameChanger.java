@@ -783,6 +783,12 @@ public class DispNameChanger extends JavaPlugin
 		
 		if (locale == null)
 		{
+			String[] lcs = sLocale.split("_");
+			if (lcs != null)
+			{
+				if (lcs.length > 1) locale = new Locale(lcs[0], lcs[1]);
+				else if (lcs.length > 0) locale = new Locale(lcs[0]);
+			}
 			log.severe(DNCStrings.dnc_long + "Unknown Locale given: "
 					+ sLocale);
 			
