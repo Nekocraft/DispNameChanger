@@ -1441,7 +1441,7 @@ public class DispNameAPI
 	{
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append(name.replaceAll("(&([0-9a-fklmnorA-FKLMNOR]))", "ง$2"));
+		sb.append(name.replaceAll("(&([0-9a-fklmnorA-FKLMNOR]))", "ยง$2"));
 		
 		String sName = sb.toString();
 		
