@@ -789,12 +789,15 @@ public class DispNameChanger extends JavaPlugin
 				if (lcs.length > 1) locale = new Locale(lcs[0], lcs[1]);
 				else if (lcs.length > 0) locale = new Locale(lcs[0]);
 			}
-			log.severe(DNCStrings.dnc_long + "Unknown Locale given: "
-					+ sLocale);
-			
-			log.severe(DNCStrings.dnc_long + "Reverting to English!");
-			
-			locale = Locale.ENGLISH;
+			else
+			{
+				log.severe(DNCStrings.dnc_long + "Unknown Locale given: "
+						+ sLocale);
+
+				log.severe(DNCStrings.dnc_long + "Reverting to English!");
+
+				locale = Locale.ENGLISH;
+			}
 		}
 		
 		ConfigurationSection section = conf
